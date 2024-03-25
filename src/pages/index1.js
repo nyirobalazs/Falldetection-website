@@ -1,3 +1,4 @@
+import React, { useState } from "react";
 import React from "react";
 import theme from "theme";
 import { Theme, Link, Image, Text, LinkBox, Box, Section, Input, Button } from "@quarkly/widgets";
@@ -5,7 +6,18 @@ import { Helmet } from "react-helmet";
 import { GlobalQuarklyPageStyles } from "global-page-styles";
 import { RawHtml, Override } from "@quarkly/components";
 import * as Components from "components";
+
 export default (() => {
+	const [username, setUsername] = useState('');
+    const [password, setPassword] = useState('');
+    const [error, setError] = useState(false);
+	const handleLogin = () => {
+        if (username === 'pi' && password === 'cohort5') {
+            window.location.href = '/index2';
+        } else {
+            setError(true);
+        }
+    }
 	return <Theme theme={theme}>
 		<GlobalQuarklyPageStyles pageUrl={"index1"} />
 		<Helmet>
@@ -163,6 +175,7 @@ export default (() => {
 								flex="1 1 auto"
 								width="100%"
 								margin="0px 0px 0px 0px"
+								onChange={(e) => setUsername(e.target.value)}
 							/>
 						</Box>
 						<Box
@@ -195,6 +208,7 @@ export default (() => {
 								font="--lead"
 								sm-width="100%"
 								border-radius="8px"
+								onChange={(e) => setPassword(e.target.value)}
 							/>
 						</Box>
 						<Button
@@ -207,9 +221,11 @@ export default (() => {
 							href="/index2"
 							type="link"
 							quarkly-title="Login Button"
+							onClick={handleLogin}
 						>
 							Login
 						</Button>
+						{error && <Text>Something went wrong</Text>}
 					</Box>
 				</Components.QuarklycommunityKitNetlifyForm>
 			</Box>
