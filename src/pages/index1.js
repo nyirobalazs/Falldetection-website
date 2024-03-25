@@ -217,7 +217,6 @@ export default (() => {
 							border-radius="8px"
 							sm-display="block"
 							sm-width="100%"
-							href="/index2"
 							type="link"
 							quarkly-title="Login Button"
 							onClick={handleLogin}
