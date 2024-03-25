@@ -1,5 +1,4 @@
 import React, { useState } from "react";
-import React from "react";
 import theme from "theme";
 import { Theme, Link, Image, Text, LinkBox, Box, Section, Input, Button } from "@quarkly/widgets";
 import { Helmet } from "react-helmet";
