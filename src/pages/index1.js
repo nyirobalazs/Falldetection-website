@@ -155,7 +155,7 @@ export default (() => {
 								border-width="0px"
 								placeholder-color="rgba(111, 131, 159, 0.5)"
 								placeholder="Ivan"
-								name="Name"
+								name="Username input"
 								type="text"
 								sm-width="100%"
 								lg-width="100%"
@@ -184,7 +184,7 @@ export default (() => {
 								border-width="0px"
 								placeholder="123"
 								flex="1 1 auto"
-								name="Email"
+								name="Passwords input"
 								required={false}
 								width="100%"
 								padding="11px 16px 11px 16px"
@@ -206,6 +206,7 @@ export default (() => {
 							sm-width="100%"
 							href="/index2"
 							type="link"
+							quarkly-title="Login Button"
 						>
 							Login
 						</Button>
