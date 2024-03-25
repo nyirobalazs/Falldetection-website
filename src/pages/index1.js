@@ -12,7 +12,7 @@ export default (() => {
     const [error, setError] = useState(false);
 	const handleLogin = () => {
         if (username === 'pi' && password === 'cohort5') {
-            window.location.href = '/index2';
+            window.location.href = "/index2";
         } else {
             setError(true);
         }
@@ -217,7 +217,6 @@ export default (() => {
 							border-radius="8px"
 							sm-display="block"
 							sm-width="100%"
-							type="link"
 							quarkly-title="Login Button"
 							onClick={handleLogin}
 						>
